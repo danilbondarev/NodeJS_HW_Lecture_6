@@ -6,7 +6,7 @@ function getHashtags(text) {
     const outMatch = [];
     
     for (let i = 0; i < result1.length; i++) {     
-    	outMatch[i] = '#'+result1[i].replace(/^(?:https?:\/\/)|(?:www\.)|\.[^.]*$/g, '').replace(/-|,|\||:/g, '_');
+    	outMatch[i] = '#'+result1[i].replace(/^(?:https?:\/\/)|(?:www\.)|(?:\.[a-z\.]+[\/]?)/g, '').replace(/-|,|\||:/g, '_');
     }
     return outMatch;
 }
